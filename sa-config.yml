@@ -1,0 +1,35 @@
+ServerApi:
+ Address: "127.0.0.1"
+ Port: 24601
+AgentApi:
+ InsecureAddr: "127.0.0.1"
+ InsecurePort: 24602
+AssetServer:
+ Addr: "192.168.4.10"
+ Port: 8080
+ BaseDir: "/tmp/vaquero/files"
+ Scheme: http
+DHCPMode: server
+DHCPCIDR: "192.168.4.10/24"
+SavePath: "/tmp/vaquero"
+Gitter:
+ Endpoint: "/postreceive"
+ Timeout: 2
+ Addr: "127.0.0.1"
+ Port: 9090
+GitHook:
+ - ID: "vaquero-local"
+   Token: ""
+   URL: "https://github.com/4a4c/vaquero-config"
+   Secret: supersecretcode
+LocalDir:
+ PollInterval: 30
+SoT:
+- Git:
+     HookID: "vaquero-local"
+     ID: "vaquero-test"
+     Branch: mac-vmnet4
+Log:
+ Level: debug
+ Location: stdout
+ Type: text

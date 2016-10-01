@@ -1,0 +1,14 @@
+---
+id: coreos-stable-1068.8.0
+name: CoreOS Stable 1068.8.0
+major_version: '1068'
+minor_version: '8.0'
+os_family: CoreOS
+release_name: stable
+boot:
+  kernel: "{{.agent.url}}/files/coreos/images/stable/1068.8.0/coreos_production_pxe.vmlinuz"
+  initrd:
+  - "{{.agent.url}}/files/coreos/images/stable/1068.8.0/coreos_production_pxe_image.cpio.gz"
+cmdline:
+  root: '/dev/sda1'
+  coreos.autologin: ''

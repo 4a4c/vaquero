@@ -1,0 +1,17 @@
+#cloud-config
+
+coreos:
+
+  update:
+    group: stable
+    reboot-strategy: off
+
+{{ if index .env "ssh_authorized_keys" }}
+ssh_authorized_keys:
+  {{ range $element := .env.ssh_authorized_keys }}
+  - {{$element}}
+  {{ end }}
+{{ else }}
+users:
+  - name: core
+    passwd: {{ .group.core_pass }} {{ end }}

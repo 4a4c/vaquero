@@ -1,0 +1,29 @@
+[Unit]
+Description=vaquero provisioning service
+Documentation=https://ciscocloud.github.io/vaquero-docs
+Requires=docker.service
+After=docker.service environment.service
+Before=docker.target
+
+[Service]
+Restart=always
+RestartSec=5
+KillMode=none
+Environment="DOCKER_REPO=shippedrepos-docker-vaquero.bintray.io"
+Environment="DOCKER_CONTAINER=vaquero/vaquero"
+Environment="DOCKER_TAG=v0.6.6"
+ExecStartPre=-/usr/bin/docker kill %n
+ExecStartPre=-/usr/bin/docker rm -v %n
+
+ExecStart=/usr/bin/docker run --name %n --rm \
+  --privileged=true \
+  --net=host \
+  -v /var/lib/vaquero:/vaquero \
+  -v /var/lib/vaquero/files:/tmp/vaquero/files \
+  ${DOCKER_REPO}/${DOCKER_CONTAINER}:${DOCKER_TAG} \
+  standalone --config /vaquero/sa-config.yaml
+
+ExecStop=/usr/bin/docker stop %n
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,18 @@
+---
+host_group: coreos
+subnet: green-786
+hosts:
+- name: etcd1
+  selectors:
+    mac: 00:50:56:9a:4f:19
+  metadata:
+    mstr: etcd-n1
+    role: kube-master
+    ipaddr: 192.168.4.21
+- name: node1
+  selectors:
+    mac: 00:25:b5:36:0a:ef
+  metadata:
+    role: kube-node
+    ipaddr: 192.168.4.31
+    hostname: mac-local-n1-192-168-4-31
