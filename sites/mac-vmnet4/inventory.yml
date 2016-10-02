@@ -10,10 +10,22 @@ hosts:
     hostname: mac-vmnet4-test01-192-168-4-11
 - name: master01
   selectors:
-    mac: 00:0c:29:31:8f:14
+    mac: 00:50:56:20:0C:DA
   metadata:
     ipaddr: 192.168.4.21
     hostname: mac-vmnet4-master01-192-168-4-21
+- name: master02
+  selectors:
+    mac: 00:50:56:2E:3A:93
+  metadata:
+    ipaddr: 192.168.4.22
+    hostname: mac-vmnet4-master01-192-168-4-22
+- name: master03
+  selectors:
+    mac: 00:50:56:3A:84:B1
+  metadata:
+    ipaddr: 192.168.4.23
+    hostname: mac-vmnet4-master01-192-168-4-23
 
 ---
 host_group: coreos
