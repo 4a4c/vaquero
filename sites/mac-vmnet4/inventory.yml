@@ -23,3 +23,17 @@ hosts:
     role: kube-node
     ipaddr: 192.168.4.32
     hostname: mac-local-n2-192-168-4-32
+- name: test-node2
+  selectors:
+    mac: 00:0c:29:31:8f:15
+  metadata:
+    role: kube-node
+    ipaddr: 192.168.4.33
+    hostname: mac-local-n2-192-168-4-33
+- name: test-node3
+  selectors:
+    mac: 00:0c:29:31:8f:16
+  metadata:
+    role: kube-node
+    ipaddr: 192.168.4.34
+    hostname: mac-local-n2-192-168-4-34
