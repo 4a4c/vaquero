@@ -28,7 +28,7 @@ SoT:
 - Git:
      HookID: "mac-vmnet4"
      ID: "mac-vmnet4"
-     Branch: mac-vmnet4
+     Branch: "mac-vmnet4"
 Log:
  Level: debug
  Location: stdout
