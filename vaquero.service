@@ -21,7 +21,7 @@ ExecStart=/usr/bin/docker run --name %n --rm \
   -v /var/lib/vaquero:/vaquero \
   -v /var/lib/vaquero/files:/tmp/vaquero/files \
   ${DOCKER_REPO}/${DOCKER_CONTAINER}:${DOCKER_TAG} \
-  standalone --config /vaquero/sa-config.yaml
+  standalone --config /vaquero/sa-config.yml
 
 ExecStop=/usr/bin/docker stop %n
 
