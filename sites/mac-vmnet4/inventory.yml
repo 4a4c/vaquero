@@ -7,7 +7,7 @@ hosts:
     mac: 00:0c:29:31:8f:14
   metadata:
     ipaddr: 192.168.4.32
-    hostname: mac-local-test-192-168-4-32
+    hostname: mac-vmnet4-test-192-168-4-32
 
 ---
 host_group: coreos
