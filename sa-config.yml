@@ -18,7 +18,7 @@ Gitter:
  Addr: "127.0.0.1"
  Port: 9090
 GitHook:
- - ID: "vaquero-local"
+ - ID: "mac-vmnet4"
    Token: "dfef1b81024e4518c9e6356af6929b1abcaf84b9" #vaquero-read token
    URL: "https://github.com/4a4c/vaquero-config"
    Secret: supersecretcode
@@ -26,8 +26,8 @@ LocalDir:
  PollInterval: 30
 SoT:
 - Git:
-     HookID: "vaquero-local"
-     ID: "vaquero-test"
+     HookID: "mac-vmnet4"
+     ID: "mac-vmnet4"
      Branch: mac-vmnet4
 Log:
  Level: debug

@@ -2,7 +2,7 @@
 id: coreos-simple
 name: Simple CoreOS host
 
-operating_system: coreos-stable-1068.8.0
+operating_system: coreos-stable-1068.8.0-simple
 
 unattended:
   type: cloud-config
