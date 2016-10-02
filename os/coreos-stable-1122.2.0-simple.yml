@@ -1,0 +1,13 @@
+---
+id: coreos-stable-1122.2.0-simple
+name: CoreOS Stable 1122.2.0 (Simple)
+major_version: '1122'
+minor_version: '2.0'
+os_family: CoreOS
+release_name: stable
+boot:
+  kernel: "{{.agent.url}}/files/coreos/images/stable/1068.8.0/coreos_production_pxe.vmlinuz"
+  initrd:
+  - "{{.agent.url}}/files/coreos/images/stable/1068.8.0/coreos_production_pxe_image.cpio.gz"
+cmdline:
+  coreos.autologin: ''
