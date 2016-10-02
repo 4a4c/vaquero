@@ -19,8 +19,8 @@ Gitter:
  Port: 9090
 GitHook:
  - ID: "mac-vmnet4"
-   Token: ""
-   URL: "https://github.com/4a4c/vaquero-config"
+   Token:
+   URL: "http://github.com/4a4c/vaquero-config"
    Secret: supersecretcode
 LocalDir:
  PollInterval: 30
