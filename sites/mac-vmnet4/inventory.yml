@@ -1,6 +1,6 @@
 ---
-host_group: coreos
-subnet: green-786
+host_group: coreos-simple
+subnet: mac-vmnet4
 hosts:
 - name: etcd1
   selectors:
@@ -12,6 +12,13 @@ hosts:
 - name: node1
   selectors:
     mac: 00:25:b5:36:0a:ef
+  metadata:
+    role: kube-node
+    ipaddr: 192.168.4.31
+    hostname: mac-local-n1-192-168-4-31
+- name: test-node1
+  selectors:
+    mac: 00:0c:29:31:8f:14
   metadata:
     role: kube-node
     ipaddr: 192.168.4.31
