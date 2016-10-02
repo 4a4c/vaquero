@@ -2,12 +2,18 @@
 host_group: coreos-simple
 subnet: mac-vmnet4
 hosts:
-- name: test
+- name: test01
+  selectors:
+    mac: 00:50:56:24:2C:BB
+  metadata:
+    ipaddr: 192.168.4.11
+    hostname: mac-vmnet4-test01-192-168-4-11
+- name: master01
   selectors:
     mac: 00:0c:29:31:8f:14
   metadata:
-    ipaddr: 192.168.4.11
-    hostname: mac-vmnet4-test-192-168-4-11
+    ipaddr: 192.168.4.21
+    hostname: mac-vmnet4-master01-192-168-4-21
 
 ---
 host_group: coreos
