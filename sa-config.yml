@@ -27,7 +27,7 @@ LocalDir:
 SoT:
 - Git:
      HookID: "vaquero-local"
-     ID: "wtf"
+     ID: "SoT"
      Branch: "mac-vmnet4"
 Log:
  Level: debug
