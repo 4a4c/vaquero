@@ -1,2 +1,2 @@
 # ignore files dir
-./files
+files/*
