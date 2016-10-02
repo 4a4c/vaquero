@@ -1,4 +1,5 @@
 #cloud-config
+
 write_files:
   - path: "/tmp/setup.sh"
     permissions: "0755"
@@ -53,9 +54,9 @@ coreos:
 
   fleet:
   {{ if index .host "mstr" }}
-    metadata: "role={{.host.role}},kube-master={{.host.mstr}},vlan={{.env.subnet.vlan}},vlan-{{.env.subnet.vlan}}=true{{if index .host "fleetadd"}}{{.host.fleetadd}}{{end}}"
+    metadata: "role={{.host.role}},kube-master={{.host.mstr}},vlan={{.host.subnet.vlan}},vlan-{{.host.subnet.vlan}}=true{{if index .host "fleetadd"}}{{.host.fleetadd}}{{end}}"
   {{ else }}
-    metadata: "role={{.host.role}},{{.host.role}}=true,vlan={{.env.subnet.vlan}},vlan-{{.env.subnet.vlan}}=true{{if index .host "fleetadd"}}{{.host.fleetadd}}{{end}}"
+    metadata: "role={{.host.role}},{{.host.role}}=true,vlan={{.host.subnet.vlan}},vlan-{{.host.subnet.vlan}}=true{{if index .host "fleetadd"}}{{.host.fleetadd}}{{end}}"
   {{ end }}
 
   units:
@@ -97,5 +98,5 @@ ssh_authorized_keys:
 {{ else }}
 users:
   - name: core
-    passwd: {{ .group.root_pass }}
+    passwd: {{ .group.core_pass }}
 {{ end }}
