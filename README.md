@@ -16,9 +16,9 @@ enable unit via `systemctl enable vaquero`
 
 commands to make sure vaquero is serving files
 
-- check ipxe chainload `curl "10.54.213.134:8080/boot-ipxe"`
-- check ipxe boot `curl "10.54.213.134:8080/ipxe?mac=00:25:b5:36:0a:ef"`
-- check cloud-config `curl "10.54.213.134:8080/cloud-config?mac=00:25:b5:36:0a:ef"`
+- check ipxe chainload `curl "192.168.4.10:8080/boot-ipxe"`
+- check ipxe boot `curl "192.168.4.10:8080/ipxe?mac=00:0c:29:31:8f:14"`
+- check cloud-config `curl "192.168.4.10:8080/cloud-config?mac=00:0c:29:31:8f:14"`
 
 ### Container used
 `vaquero:v0.6.6`
