@@ -19,7 +19,7 @@ Gitter:
  Port: 9090
 GitHook:
  - ID: "vaquero-local"
-   Token: ""
+   Token: "dfef1b81024e4518c9e6356af6929b1abcaf84b9" #vaquero-read token
    URL: "https://github.com/4a4c/vaquero-config"
    Secret: supersecretcode
 LocalDir:
