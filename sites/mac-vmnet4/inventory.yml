@@ -1,4 +1,16 @@
 ---
+name: test01
+interfaces:
+  - type: physical
+    subnet: mac-vmnet4
+    mac: 00:50:56:24:2C:BB
+    identifier: eth0
+    ipv4: 192.168.4.11
+    hostname: mac-vmnet4-test01-192-168-4-11
+metadata:
+    etcd_name: node1
+workflow: coreos-simple
+---
 host_group: coreos-simple
 subnet: mac-vmnet4
 hosts:
